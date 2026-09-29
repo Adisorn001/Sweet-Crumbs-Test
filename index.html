@@ -11,6 +11,21 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <script>
+    function showErr(t){
+      document.body.insertAdjacentHTML('beforeend',
+        '<pre style="padding:16px;color:red;white-space:pre-wrap">'+t+'</pre>');
+    }
+    window.addEventListener('error', function(e){
+      showErr('ERROR: '+(e.message||'')+' '+(e.filename||(e.target&&(e.target.src||e.target.href))||''));
+    }, true);
+    window.addEventListener('unhandledrejection', function(e){
+      showErr('PROMISE: '+e.reason);
+    });
+    </script>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
+
