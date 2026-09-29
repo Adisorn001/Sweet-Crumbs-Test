@@ -18,9 +18,9 @@ export default function About() {
           </div>
           <div className="about__story-text">
             <h2>Our Story</h2>
-            <p>Founded in the heart of Bangkok, Sweet Crumbs Bakery began as a small family kitchen driven by a deep passion for baking and crafting moments of joy through pastries.</p>
-            <p>Our cherished family recipes have been passed down through generations, combining traditional techniques with contemporary flavors to create truly unique artisanal treats.</p>
-            <p>We are committed to quality, always striving to deliver the most delightful and fresh baked goods to our beloved community.</p>
+            <p>Sweet Crumbs เริ่มต้นจากครัวเล็กๆ ที่บ้านในอ่างทอง ที่กลิ่นเนยอุ่นๆ ลอยมาก่อนตะวันขึ้น ทุกเช้าวันเสาร์เราอบครัวซองต์ถาดเดียว แล้วถือไปให้เพื่อนบ้าน แค่อยากเห็นรอยยิ้มตอนจิบกาแฟแก้วแรก</p>
+            <p>เรื่องราวแพร่ไปเร็วกว่าตัวครัวซองต์ เพื่อนบ้านขอสั่งล่วงหน้า แล้วก็เพื่อนของเพื่อน แล้วก็คนที่เราไม่เคยรู้จัก สิ่งที่เคยเป็นแค่นิสัยวันหยุดกลายเป็นคำมั่นว่า ขนมทุกชิ้นอบสดในเช้าวันนั้น ทีละน้อย ใช้เนยแท้ ไม่ลดขั้นตอน</p>
+            <p>เราขอขายหมดตอนเที่ยงดีกว่าเสิร์ฟสิ่งที่ตัวเองไม่อยากกิน ไม่ว่าคุณจะแวะมาซื้อขนมชิ้นเล็กๆ หรือสั่งสำหรับวันสำคัญ เราหวังว่าขนมจาก Sweet Crumbs จะทำให้วันของคุณหวานขึ้นอีกนิด</p>
           </div>
         </div>
       </section>
