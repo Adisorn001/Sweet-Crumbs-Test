@@ -1,12 +1,11 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// บน GitHub Actions จะดึงชื่อ repo อัตโนมัติ (เช่น /Sweet-Crumb-xxx/)
-// ตอนรันในเครื่อง (npm run dev) จะใช้ '/' ตามปกติ
-const repo = process.env.GITHUB_REPOSITORY?.split('/')[1];
+// ใส่ชื่อ Repository บน GitHub ของคุณตรงนี้ (ต้องมี / ปิดหน้าและหลัง)
+const REPO_NAME = '/Sweet-Crumbs-Test/';
 
 export default defineConfig({
-  base: repo ? `/${repo}/` : '/',
+  base: process.env.NODE_ENV === 'production' ? REPO_NAME : '/',
   plugins: [react()],
   server: {
     port: 3000,
