@@ -14,7 +14,11 @@ export default function About() {
       <section className="about__story">
         <div className="container about__story-grid">
           <div className="about__story-image-container">
-            <img src="https://placehold.co/500x400/D4A574/3E2723?text=Our+Kitchen" alt="Our Kitchen" className="about__story-image" />
+            <img
+              src={`${import.meta.env.BASE_URL}images/about_story.jpg`}
+              alt="Our Kitchen"
+              className="about__story-image"
+            />
           </div>
           <div className="about__story-text">
             <h2>ที่มาของเรา</h2>
