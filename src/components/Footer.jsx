@@ -32,9 +32,9 @@ export default function Footer() {
         <div className="footer__section">
           <h4 className="footer__heading">Contact</h4>
           <ul className="footer__contact">
-            <li>📍 123 Sukhumvit Road, Watthana, Bangkok 10110</li>
-            <li>📞 +66 2 123 4567</li>
-            <li>✉️ hello@sweetcrumbs.com</li>
+            <li>📍 123 Posa road, Posa, Angthong 14000</li>
+            <li>📞 +66 093 221 0367</li>
+            <li>✉️ adisorndankeawwork@gmail.com</li>
             <li>🕐 Mon–Sat 7AM–8PM | Sun 8AM–6PM</li>
           </ul>
         </div>
@@ -43,7 +43,7 @@ export default function Footer() {
           <h4 className="footer__heading">Follow Us</h4>
           <div className="footer__social">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/xdisr.dan.k.w?"
               target="_blank"
               rel="noopener noreferrer"
               className="footer__social-link"
@@ -51,7 +51,7 @@ export default function Footer() {
               📘 Facebook
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/adisorn_dankeaw?stkn=MWx4bHphbXJkMnVhdw%3D%3D&utm_source=qr"
               target="_blank"
               rel="noopener noreferrer"
               className="footer__social-link"
