@@ -62,7 +62,7 @@ export default function Contact() {
           </div>
           <div className="contact__map">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.5!2d100.56!3d13.74!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDQ0JzI0LjAiTiAxMDDCsDMzJzM2LjAiRQ!5e0!3m2!1sen!2sth!4v1" 
+              src="https://maps.app.goo.gl/ZTEA2MipHZLCsJVDA?g_st=ic" 
               title="Google Maps"
             ></iframe>
           </div>
