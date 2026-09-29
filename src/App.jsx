@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { CartProvider } from './context/CartContext';
 import Header from './components/Header';
@@ -17,31 +17,30 @@ import './App.css';
 
 function App() {
   return (
-    <BrowserRouter>
-      <AuthProvider>
-        <CartProvider>
-          <div className="app">
-            <Header />
-            <main className="main-content">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/featured" element={<FeaturedProducts />} />
-                <Route path="/products" element={<ProductList />} />
-                <Route path="/news" element={<News />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/cart" element={<Cart />} />
-                <Route path="/orders" element={<OrderHistory />} />
-              </Routes>
-            </main>
-            <Footer />
-          </div>
-        </CartProvider>
-      </AuthProvider>
-    </BrowserRouter>
+    <AuthProvider>
+      <CartProvider>
+        <HashRouter>
+          <Header />
+          <main className="main-content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/featured" element={<FeaturedProducts />} />
+              <Route path="/products" element={<ProductList />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/orders" element={<OrderHistory />} />
+            </Routes>
+          </main>
+          <Footer />
+        </HashRouter>
+      </CartProvider>
+    </AuthProvider>
   );
 }
 
 export default App;
+
