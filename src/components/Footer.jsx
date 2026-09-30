@@ -10,39 +10,39 @@ export default function Footer() {
             <span className="footer__logo-icon">🍰</span> Sweet Crumbs Bakery
           </h3>
           <p className="footer__tagline">
-            ทำด้วยมือด้วยใจ อบอย่างพิถีพิถันจนสมบูรณ์แบบ
+            ทำด้วยใจ อบด้วยความรัก
           </p>
           <p className="footer__description">
-            จากเตาอบของเราส่งตรงถึงใจคุณ — สัมผัสรสชาติขนมอบระดับพรีเมียมที่รังสรรค์ขึ้นอย่างพิถีพิถัน ด้วยวัตถุดิบชั้นเลิศและกรรมวิธีการอบที่สืบทอดกันมาอย่างยาวนาน
+            จากเตาอบของเราสู่หัวใจของคุณ — สัมผัสความอร่อยของขนมอาร์ติซานชั้นเลิศ ทำจากวัตถุดิบพรีเมียมและสูตรดั้งเดิมที่สืบทอดกันมาหลายชั่วอายุคน
           </p>
         </div>
 
         <div className="footer__section">
-          <h4 className="footer__heading">Quick Links</h4>
+          <h4 className="footer__heading">ลิงก์ด่วน</h4>
           <ul className="footer__links">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/products">Products</Link></li>
-            <li><Link to="/featured">Featured</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/">หน้าหลัก</Link></li>
+            <li><Link to="/products">สินค้าทั้งหมด</Link></li>
+            <li><Link to="/featured">สินค้าแนะนำ</Link></li>
+            <li><Link to="/about">เกี่ยวกับเรา</Link></li>
+            <li><Link to="/contact">ติดต่อเรา</Link></li>
           </ul>
         </div>
 
         <div className="footer__section">
-          <h4 className="footer__heading">Contact</h4>
+          <h4 className="footer__heading">ติดต่อ</h4>
           <ul className="footer__contact">
-            <li>📍 123 Sukhumvit Road, Watthana, Bangkok 10110</li>
-            <li>📞 +66 2 123 4567</li>
-            <li>✉️ hello@sweetcrumbs.com</li>
-            <li>🕐 Mon–Sat 7AM–8PM | Sun 8AM–6PM</li>
+            <li>📍 123 ถนน... เมือง อ่างทอง 14000</li>
+            <li>📞 +66 093 221 0367</li>
+            <li>✉️ adisorndankeawwork@gmail.com</li>
+            <li>🕐 จ–ส 07:00–20:00 | อา 08:00–18:00</li>
           </ul>
         </div>
 
         <div className="footer__section">
-          <h4 className="footer__heading">Follow Us</h4>
+          <h4 className="footer__heading">ติดตามเรา</h4>
           <div className="footer__social">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/xdisr.dan.k.w/?locale=th_TH"
               target="_blank"
               rel="noopener noreferrer"
               className="footer__social-link"
@@ -50,7 +50,7 @@ export default function Footer() {
               📘 Facebook
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/adisorn_dankeaw/"
               target="_blank"
               rel="noopener noreferrer"
               className="footer__social-link"
@@ -63,14 +63,14 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="footer__social-link"
             >
-              💬 Line
+              💬 Line: @sweetcrumbs
             </a>
           </div>
         </div>
       </div>
 
       <div className="footer__bottom container">
-        <p>© 2026 Sweet Crumbs Bakery. All rights reserved.</p>
+        <p>© 2569 Sweet Crumbs Bakery สงวนลิขสิทธิ์ทุกประการ</p>
       </div>
     </footer>
   );
