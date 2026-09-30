@@ -31,9 +31,9 @@ export function AuthProvider({ children }) {
 
   const login = (username) => {
     const trimmed = username.trim();
-    if (!trimmed) return { success: false, error: 'Please enter a username.' };
+    if (!trimmed) return { success: false, error: 'กรุณาระบุชื่อผู้ใช้' };
     if (trimmed.length < 3)
-      return { success: false, error: 'Username must be at least 3 characters.' };
+      return { success: false, error: 'ชื่อผู้ใช้ต้องมีอย่างน้อย 3 ตัวอักษร' };
 
     const users = getUsers();
     const found = users.find(
@@ -46,24 +46,24 @@ export function AuthProvider({ children }) {
     }
     return {
       success: false,
-      error: 'User not found. Please register first.',
+      error: 'ไม่พบชื่อผู้ใช้นี้ กรุณาสมัครสมาชิกก่อน',
     };
   };
 
   const register = (username) => {
     const trimmed = username.trim();
-    if (!trimmed) return { success: false, error: 'Please enter a username.' };
+    if (!trimmed) return { success: false, error: 'กรุณาระบุชื่อผู้ใช้' };
     if (trimmed.length < 3)
-      return { success: false, error: 'Username must be at least 3 characters.' };
-    if (!/^[a-zA-Z0-9_]+$/.test(trimmed))
+      return { success: false, error: 'ชื่อผู้ใช้ต้องมีอย่างน้อย 3 ตัวอักษร' };
+    if (!/^[a-zA-Z0-9_ก-๙]+$/.test(trimmed))
       return {
         success: false,
-        error: 'Username can only contain letters, numbers, and underscores.',
+        error: 'ชื่อผู้ใช้ใช้ได้เฉพาะตัวอักษร ตัวเลข และ _',
       };
 
     const users = getUsers();
     if (users.find((u) => u.username.toLowerCase() === trimmed.toLowerCase())) {
-      return { success: false, error: 'Username already taken.' };
+      return { success: false, error: 'ชื่อผู้ใช้นี้ถูกใช้งานแล้ว' };
     }
 
     const newUser = {
