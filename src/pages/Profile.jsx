@@ -19,7 +19,7 @@ export default function Profile() {
   const handleSave = (e) => {
     e.preventDefault();
     updateProfile({ displayName, bio, phone });
-    setToastMessage('Profile updated successfully!');
+    setToastMessage('✓ อัปเดตข้อมูลเรียบร้อยแล้ว');
     setTimeout(() => setToastMessage(''), 3000);
   };
 
@@ -29,8 +29,8 @@ export default function Profile() {
   };
 
   const formattedDate = user?.joinDate 
-    ? new Date(user.joinDate).toLocaleDateString() 
-    : 'Unknown';
+    ? new Date(user.joinDate).toLocaleDateString('th-TH', { year: 'numeric', month: 'long', day: 'numeric' }) 
+    : 'ไม่ทราบ';
 
   const avatarLetter = (user.displayName || user.username || '?').charAt(0).toUpperCase();
 
@@ -43,13 +43,13 @@ export default function Profile() {
               {avatarLetter}
             </div>
             <h2 className="profile__name">{user.displayName || user.username}</h2>
-            <p className="profile__since">Member since {formattedDate}</p>
+            <p className="profile__since">สมาชิกตั้งแต่ {formattedDate}</p>
           </div>
           
           <div className="profile__body">
             <form onSubmit={handleSave}>
               <div className="profile__field">
-                <label>Display Name</label>
+                <label>ชื่อที่แสดง</label>
                 <input 
                   type="text" 
                   value={displayName} 
@@ -57,7 +57,7 @@ export default function Profile() {
                 />
               </div>
               <div className="profile__field">
-                <label>Bio</label>
+                <label>แนะนำตัว</label>
                 <textarea 
                   value={bio} 
                   onChange={e => setBio(e.target.value)} 
@@ -65,7 +65,7 @@ export default function Profile() {
                 ></textarea>
               </div>
               <div className="profile__field">
-                <label>Phone</label>
+                <label>เบอร์โทรศัพท์</label>
                 <input 
                   type="text" 
                   value={phone} 
@@ -74,17 +74,17 @@ export default function Profile() {
               </div>
               
               <div className="profile__actions">
-                <button type="submit" className="btn btn-accent">Save Changes</button>
-                <button type="button" className="btn btn-danger" onClick={handleLogout}>Logout</button>
+                <button type="submit" className="btn btn-accent">💾 บันทึกข้อมูล</button>
+                <button type="button" className="btn btn-danger" onClick={handleLogout}>ออกจากระบบ</button>
               </div>
             </form>
 
             <div className="profile__links">
               <Link to="/orders" className="profile__link">
-                <span>📋</span> Order History
+                <span>📋</span> ประวัติการสั่งซื้อ
               </Link>
               <Link to="/products" className="profile__link">
-                <span>🛒</span> Browse Products
+                <span>🛒</span> เลือกซื้อสินค้า
               </Link>
             </div>
           </div>
