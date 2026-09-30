@@ -9,21 +9,21 @@ export default function Home() {
 
   const slides = [
     {
-      bg: '#D4A574',
-      title: 'Welcome to Sweet Crumbs',
-      subtitle: 'Where every bite tells a story of passion and tradition',
-      color: 'var(--text)'
+      bg: '#8B5E3C',
+      title: 'ยินดีต้อนรับสู่ Sweet Crumbs',
+      subtitle: 'ที่ซึ่งทุกคำบอกเล่าเรื่องราวแห่งความหลงใหลและประเพณีการอบขนม',
+      color: '#fff'
     },
     {
-      bg: '#8B5E3C',
-      title: 'Artisan Pastries',
-      subtitle: 'Handcrafted daily with the finest ingredients',
+      bg: '#5D3A1A',
+      title: 'ขนมอาร์ติซาน',
+      subtitle: 'ทำด้วยมือทุกวันจากวัตถุดิบพรีเมียมคัดสรรเป็นพิเศษ',
       color: '#fff'
     },
     {
       bg: '#C85A7C',
-      title: 'Sweet Moments',
-      subtitle: "Celebrate life's sweetest moments with us",
+      title: 'ช่วงเวลาหวาน ๆ',
+      subtitle: 'ร่วมเฉลิมฉลองทุกช่วงเวลาสำคัญในชีวิตกับขนมสุดพิเศษจากเรา',
       color: '#fff'
     }
   ];
@@ -31,7 +31,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide(prev => (prev + 1) % slides.length);
-    }, 5000);
+    }, 5500);
     return () => clearInterval(timer);
   }, [slides.length]);
 
@@ -55,7 +55,7 @@ export default function Home() {
                 <h1>{slide.title}</h1>
                 <p>{slide.subtitle}</p>
                 {index === 0 && (
-                  <Link to="/products" className="btn btn-accent">Shop Now</Link>
+                  <Link to="/products" className="btn btn-accent">🛒 เลือกซื้อสินค้า</Link>
                 )}
               </div>
             </div>
@@ -78,21 +78,23 @@ export default function Home() {
 
       <section className="home__features">
         <div className="container">
+          <h2 className="section-title">ทำไมต้อง Sweet Crumbs?</h2>
+          <p className="section-subtitle">เรามุ่งมั่นมอบประสบการณ์ขนมที่ดีที่สุดให้กับทุกคน</p>
           <div className="home__features-grid">
             <div className="home__feature-card">
               <div className="home__feature-icon">🌅</div>
-              <h3>Fresh Daily</h3>
-              <p>อบสดใหม่ทุกเช้าก่อนพระอาทิตย์ขึ้น</p>
+              <h3>สดใหม่ทุกวัน</h3>
+              <p>อบสดใหม่ทุกเช้าก่อนพระอาทิตย์ขึ้น รับประกันความสดและความอร่อยในทุกชิ้น</p>
             </div>
             <div className="home__feature-card">
               <div className="home__feature-icon">✨</div>
-              <h3>Premium Ingredients</h3>
-              <p>เฉพาะ ingredient คุณภาพสูงจากซัพพลายเออร์ท้องถิ่น</p>
+              <h3>วัตถุดิบพรีเมียม</h3>
+              <p>คัดสรรเฉพาะวัตถุดิบชั้นเลิศจากแหล่งผลิตท้องถิ่นที่เชื่อถือได้ ปลอดภัย ไร้สารกันบูด</p>
             </div>
             <div className="home__feature-card">
               <div className="home__feature-icon">❤️</div>
-              <h3>Made with Love</h3>
-              <p>ทุกชิ้นถูกสร้างขึ้นด้วยความรักและใส่ใจ</p>
+              <h3>ทำด้วยความรัก</h3>
+              <p>ทุกชิ้นปั้นด้วยมืออย่างประณีต ด้วยความหลงใหลและความตั้งใจในทุกรายละเอียด</p>
             </div>
           </div>
         </div>
@@ -100,7 +102,8 @@ export default function Home() {
 
       <section className="home__bestsellers">
         <div className="container">
-          <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '40px' }}>Our Bestsellers</h2>
+          <h2 className="section-title">สินค้าขายดี</h2>
+          <p className="section-subtitle">เมนูโปรดที่ลูกค้าเลือกซ้ำแล้วซ้ำเล่าทุกวัน</p>
           <div className="home__bestsellers-grid">
             {bestsellers.map(product => (
               <div key={product.id} className="home__bestseller-card">
@@ -113,7 +116,7 @@ export default function Home() {
             ))}
           </div>
           <div style={{ textAlign: 'center', marginTop: '40px' }}>
-            <Link to="/products" className="btn btn-outline">View All</Link>
+            <Link to="/products" className="btn btn-outline">ดูสินค้าทั้งหมด →</Link>
           </div>
         </div>
       </section>
