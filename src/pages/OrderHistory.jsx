@@ -18,11 +18,12 @@ export default function OrderHistory() {
     return (
       <div className="page page-orders fade-in">
         <div className="container">
-          <h1 className="section-title">Order History</h1>
+          <h1 className="section-title">ประวัติการสั่งซื้อ</h1>
           <div className="orders__empty">
             <div className="orders__empty-icon">📋</div>
-            <h2>No orders yet</h2>
-            <Link to="/products" className="btn" style={{marginTop: '20px', display: 'inline-block'}}>Start Shopping</Link>
+            <h2>ยังไม่มีรายการสั่งซื้อ</h2>
+            <p style={{ color: 'var(--text-muted)', marginBottom: '24px' }}>รายการสั่งซื้อของคุณจะปรากฏที่นี่</p>
+            <Link to="/products" className="btn" style={{display: 'inline-block'}}>เลือกซื้อสินค้า</Link>
           </div>
         </div>
       </div>
@@ -35,8 +36,9 @@ export default function OrderHistory() {
   return (
     <div className="page page-orders fade-in">
       <div className="container">
-        <h1 className="section-title">Order History</h1>
-        
+        <h1 className="section-title">ประวัติการสั่งซื้อ</h1>
+        <p className="section-subtitle">ของ {user.displayName || user.username}</p>
+
         {dateKeys.map(dateKey => {
           const userOrders = ordersByDate[dateKey].filter(o => o.username === user.username);
           if (userOrders.length === 0) return null;
@@ -44,7 +46,7 @@ export default function OrderHistory() {
           return (
             <div key={dateKey} className="orders__date-group">
               <h2 className="orders__date-header">
-                {new Date(dateKey).toLocaleDateString(undefined, {
+                📅 {new Date(dateKey + 'T12:00:00').toLocaleDateString('th-TH', {
                   weekday: 'long',
                   year: 'numeric',
                   month: 'long',
@@ -55,8 +57,8 @@ export default function OrderHistory() {
                 {userOrders.map(order => (
                   <div key={order.id} className="orders__card">
                     <div className="orders__card-header">
-                      <span className="orders__card-id">Order #{String(order.id).substring(0, 8)}</span>
-                      <span className="orders__card-time">{new Date(order.date).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
+                      <span className="orders__card-id">คำสั่งซื้อ #{String(order.id).substring(0, 8).toUpperCase()}</span>
+                      <span className="orders__card-time">{new Date(order.date).toLocaleTimeString('th-TH', {hour: '2-digit', minute:'2-digit'})}</span>
                     </div>
                     <div className="orders__card-items">
                       {order.items.map(item => (
@@ -67,7 +69,7 @@ export default function OrderHistory() {
                       ))}
                     </div>
                     <div className="orders__card-total">
-                      <span>Total</span>
+                      <span>รวม</span>
                       <span>฿{order.total}</span>
                     </div>
                   </div>
