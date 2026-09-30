@@ -13,21 +13,21 @@ export default function Contact() {
             <div className="contact__info-item">
               <span className="contact__info-icon">📍</span>
               <div className="contact__info-text">
-                <h4>Address</h4>
+                <h4>ที่อยู่</h4>
                 <p>123 Angthong 14000</p>
               </div>
             </div>
             <div className="contact__info-item">
               <span className="contact__info-icon">📞</span>
               <div className="contact__info-text">
-                <h4>Phone</h4>
+                <h4>โทรศัพท์</h4>
                 <p>+66 093 221 0367</p>
               </div>
             </div>
             <div className="contact__info-item">
               <span className="contact__info-icon">✉️</span>
               <div className="contact__info-text">
-                <h4>Email</h4>
+                <h4>อีเมล</h4>
                 <p>adisorndankeawwork@gmail.com</p>
               </div>
             </div>
