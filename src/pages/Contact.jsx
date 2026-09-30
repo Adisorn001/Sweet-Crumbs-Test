@@ -55,8 +55,8 @@ export default function Contact() {
             <div className="contact__info-item">
               <span className="contact__info-icon">🕐</span>
               <div className="contact__info-text">
-                <h4>Hours</h4>
-                <p>Mon–Sat 7:00 AM – 8:00 PM, Sun 8:00 AM – 6:00 PM</p>
+                <h4>เวลาเปิด-ปิด</h4>
+                <p>จันทร์-เสาร์ 07:00 – 20:00 น. | อาทิตย์ 08:00 - 18:00 น.</p>
               </div>
             </div>
           </div>
