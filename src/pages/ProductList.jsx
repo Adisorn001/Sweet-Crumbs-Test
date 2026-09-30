@@ -9,7 +9,7 @@ export default function ProductList() {
 
   const handleAddToCart = (product) => {
     addToCart(product);
-    setToast('Added to cart!');
+    setToast(`🛒 เพิ่ม "${product.name}" ลงตะกร้าแล้ว!`);
     setTimeout(() => {
       setToast(null);
     }, 3000);
@@ -19,8 +19,8 @@ export default function ProductList() {
     <div className="page products-page fade-in">
       <div className="container" style={{ padding: '60px 0' }}>
         <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-          <h1 className="section-title">Our Products</h1>
-          <p className="section-subtitle">Explore our full menu</p>
+          <h1 className="section-title">สินค้าทั้งหมด</h1>
+          <p className="section-subtitle">สำรวจเมนูขนมทำมือครบครัน จากครัวของเราถึงคุณ</p>
         </div>
 
         <div className="products__grid">
@@ -34,7 +34,7 @@ export default function ProductList() {
                   className="btn btn-accent btn-sm"
                   onClick={() => handleAddToCart(product)}
                 >
-                  Add to Cart
+                  🛒 ใส่ตะกร้า
                 </button>
               </div>
             </div>
