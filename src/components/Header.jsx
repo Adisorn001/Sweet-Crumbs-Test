@@ -22,12 +22,12 @@ export default function Header() {
   }, [location]);
 
   const navLinks = [
-    { to: '/', label: 'Home' },
-    { to: '/about', label: 'About' },
-    { to: '/featured', label: 'Featured' },
-    { to: '/products', label: 'Products' },
-    { to: '/news', label: 'News' },
-    { to: '/contact', label: 'Contact' },
+    { to: '/', label: 'หน้าหลัก' },
+    { to: '/about', label: 'เกี่ยวกับเรา' },
+    { to: '/featured', label: 'สินค้าแนะนำ' },
+    { to: '/products', label: 'สินค้าทั้งหมด' },
+    { to: '/news', label: 'ข่าวสาร' },
+    { to: '/contact', label: 'ติดต่อเรา' },
   ];
 
   return (
@@ -54,7 +54,7 @@ export default function Header() {
         </nav>
 
         <div className="header__actions">
-          <Link to="/cart" className="header__cart">
+          <Link to="/cart" className="header__cart" title="ตะกร้าสินค้า">
             <span className="header__cart-icon">🛒</span>
             {totalItems > 0 && (
               <span className="header__cart-badge">{totalItems}</span>
@@ -64,13 +64,13 @@ export default function Header() {
           {isLoggedIn ? (
             <Link to="/profile" className="header__user">
               <span className="header__user-avatar">
-                {user.displayName?.charAt(0).toUpperCase()}
+                {(user.displayName || user.username)?.charAt(0).toUpperCase()}
               </span>
-              <span className="header__user-name">{user.displayName}</span>
+              <span className="header__user-name">{user.displayName || user.username}</span>
             </Link>
           ) : (
             <Link to="/login" className="header__login-btn">
-              Login
+              เข้าสู่ระบบ
             </Link>
           )}
         </div>
@@ -78,7 +78,7 @@ export default function Header() {
         <button
           className={`header__hamburger ${menuOpen ? 'header__hamburger--open' : ''}`}
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
+          aria-label="เมนู"
         >
           <span></span>
           <span></span>
