@@ -1,56 +1,65 @@
+// รูปภาพใช้ BASE_URL เพื่อให้ path ถูกต้องเมื่อ deploy บน GitHub Pages (base: './')
+const img = (name) => `${import.meta.env.BASE_URL}images/${name}`;
+
 export const products = [
   {
     id: 1,
-    name: 'Classic Croissant',
+    name: 'ครัวซองต์คลาสสิก',
+    nameEn: 'Classic Croissant',
     price: 85,
     description:
-      'Buttery, flaky layers of perfection, baked fresh every morning with premium French butter.',
-    image: '/images/croissant.jpg',
+      'แป้งเนยสดกรอบนอกนุ่มใน อบสดใหม่ทุกเช้าด้วยเนยฝรั่งเศสชั้นเลิศ หอมกรุ่นไม่มีวันเบื่อ',
+    image: img('croissant.jpg'),
     featured: true,
   },
   {
     id: 2,
-    name: 'Chocolate Lava Cake',
+    name: 'ช็อกโกแลต ลาวาเค้ก',
+    nameEn: 'Chocolate Lava Cake',
     price: 150,
     description:
-      'Rich molten chocolate center with a delicate outer shell, served warm with a dusting of cocoa.',
-    image: '/images/lava-cake.jpg',
+      'เค้กช็อกโกแลตเนื้อนุ่มซ่อนไส้ช็อกโกแลตร้อนละลายอยู่ภายใน โรยผงโกโก้หอมกรุ่น เสิร์ฟอุ่น ๆ',
+    image: img('lava-cake.jpg'),
     featured: true,
   },
   {
     id: 3,
-    name: 'Strawberry Tart',
+    name: 'สตรอว์เบอร์รีทาร์ต',
+    nameEn: 'Strawberry Tart',
     price: 120,
     description:
-      'Fresh strawberries arranged on velvety custard cream in a golden buttery crust.',
-    image: '/images/strawberry-tart.jpg',
+      'สตรอว์เบอร์รีสดหวานอมเปรี้ยวเรียงบนคัสตาร์ดครีมเนียมนุ่มในเปลือกทาร์ตเนยทองกรอบ',
+    image: img('strawberry-tart.jpg'),
     featured: true,
   },
   {
     id: 4,
-    name: 'Blueberry Muffin',
+    name: 'บลูเบอร์รีมัฟฟิน',
+    nameEn: 'Blueberry Muffin',
     price: 65,
     description:
-      'Bursting with fresh blueberries and topped with golden crumb streusel.',
-    image: '/images/blueberry-muffin.jpg',
+      'มัฟฟินโดมสูงเต็มไปด้วยบลูเบอร์รีสด หน้ากรุบกรอบด้วยสตรูเซลทองสวย',
+    image: img('blueberry-muffin.jpg'),
     featured: false,
   },
   {
     id: 5,
-    name: 'Cinnamon Roll',
+    name: 'ซินนามอนโรล',
+    nameEn: 'Cinnamon Roll',
     price: 95,
     description:
-      'Soft, pillowy dough swirled with cinnamon sugar and drizzled with cream cheese frosting.',
-    image: '/images/cinnamon-roll.jpg',
+      'โรลนุ่มหอมอบอวลกลิ่นอบเชย ราดด้วยครีมชีสฟรอสติ้งเนียนหวาน ทำใหม่สดทุกวัน',
+    image: img('cinnamon-roll.jpg'),
     featured: false,
   },
   {
     id: 6,
-    name: 'Tiramisu',
+    name: 'ทิรามิสุ',
+    nameEn: 'Tiramisu',
     price: 180,
     description:
-      'Layers of espresso-soaked ladyfingers and silky mascarpone cream, dusted with cocoa.',
-    image: '/images/tiramisu.jpg',
+      'เลดี้ฟิงเกอร์ชุ่มกาแฟเอสเปรสโซสลับครีมมาสคาร์โปเน่ เนียนละมุน โรยผงโกโก้เข้มข้น',
+    image: img('tiramisu.jpg'),
     featured: false,
   },
 ];
