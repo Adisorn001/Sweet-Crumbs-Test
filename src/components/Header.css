@@ -52,11 +52,14 @@
 .header__nav {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 2px;
+  flex-wrap: nowrap;
 }
 
 .header__link {
-  padding: 8px 16px;
+  padding: 8px 10px;
+  white-space: nowrap;
+  font-size: 0.95rem;
   color: var(--text-light);
   font-weight: 500;
   border-radius: var(--radius-sm);
@@ -159,12 +162,14 @@
 }
 
 .header__user-name {
+  white-space: nowrap;
   font-weight: 600;
   font-size: 0.9rem;
   color: var(--primary-dark);
 }
 
 .header__login-btn {
+  white-space: nowrap;
   padding: 8px 20px;
   background: var(--primary);
   color: var(--white);
@@ -210,8 +215,8 @@
   transform: translateY(-7.5px) rotate(-45deg);
 }
 
-/* Mobile */
-@media (max-width: 768px) {
+/* Tablet / มือถือ — เมนูภาษาไทยยาวกว่าเดิม จึงเปลี่ยนเป็นแฮมเบอร์เกอร์ที่ 1180px */
+@media (max-width: 1180px) {
   .header__hamburger {
     display: flex;
   }
@@ -222,6 +227,7 @@
     left: 0;
     right: 0;
     flex-direction: column;
+    gap: 0;
     background: var(--white);
     padding: 0;
     max-height: 0;
@@ -231,7 +237,7 @@
   }
 
   .header__nav--open {
-    max-height: 400px;
+    max-height: 480px;
     padding: 16px 0;
   }
 
@@ -239,6 +245,7 @@
     width: 100%;
     text-align: center;
     padding: 12px 20px;
+    font-size: 1rem;
     border-radius: 0;
   }
 
@@ -249,7 +256,9 @@
   .header__link--active {
     background: var(--bg-alt);
   }
+}
 
+@media (max-width: 768px) {
   .header__user-name {
     display: none;
   }
