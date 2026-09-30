@@ -11,7 +11,7 @@ export default function FeaturedProducts() {
 
   const handleAddToCart = (product) => {
     addToCart(product);
-    setToast('Added to cart!');
+    setToast(`🛒 เพิ่ม "${product.name}" ลงตะกร้าแล้ว!`);
     setTimeout(() => {
       setToast(null);
     }, 3000);
@@ -21,8 +21,8 @@ export default function FeaturedProducts() {
     <div className="page featured fade-in">
       <div className="container" style={{ padding: '60px 0' }}>
         <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-          <h1 className="section-title">Featured Products</h1>
-          <p className="section-subtitle">Our most loved creations</p>
+          <h1 className="section-title">สินค้าแนะนำ</h1>
+          <p className="section-subtitle">เมนูขนมสุดพิเศษที่ลูกค้าทุกคนต้องลอง</p>
         </div>
 
         <div className="featured__grid">
@@ -40,7 +40,7 @@ export default function FeaturedProducts() {
                     className="btn btn-accent btn-sm"
                     onClick={() => handleAddToCart(product)}
                   >
-                    Add to Cart
+                    🛒 ใส่ตะกร้า
                   </button>
                 </div>
               </div>
@@ -49,7 +49,7 @@ export default function FeaturedProducts() {
         </div>
 
         <div className="featured__cta">
-          <Link to="/products" className="btn btn-outline">See All Products</Link>
+          <Link to="/products" className="btn btn-outline">ดูสินค้าทั้งหมด →</Link>
         </div>
       </div>
       
