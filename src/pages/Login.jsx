@@ -21,7 +21,7 @@ export default function Login() {
     if (result.success) {
       navigate('/profile');
     } else {
-      setError(result.error || 'An error occurred');
+      setError(result.error || 'เกิดข้อผิดพลาด');
     }
   };
 
@@ -33,19 +33,20 @@ export default function Login() {
             <div className="login__header">
               <div className="login__header-icon">🥐</div>
               <h2>Sweet Crumbs</h2>
+              <p>สมาชิกรับสิทธิพิเศษมากมาย</p>
             </div>
             <div className="login__tabs">
               <button 
                 className={`login__tab ${activeTab === 'login' ? 'login__tab--active' : ''}`}
                 onClick={() => { setActiveTab('login'); setError(''); setUsername(''); }}
               >
-                Login
+                เข้าสู่ระบบ
               </button>
               <button 
                 className={`login__tab ${activeTab === 'register' ? 'login__tab--active' : ''}`}
                 onClick={() => { setActiveTab('register'); setError(''); setUsername(''); }}
               >
-                Register
+                สมัครสมาชิก
               </button>
             </div>
             <div className="login__body">
@@ -53,14 +54,14 @@ export default function Login() {
                 <input 
                   type="text" 
                   className="login__input" 
-                  placeholder="Username" 
+                  placeholder="ชื่อผู้ใช้ (Username)" 
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   required
                 />
                 {error && <div className="login__error">{error}</div>}
                 <button type="submit" className="btn login__submit">
-                  {activeTab === 'login' ? 'Login' : 'Create Account'}
+                  {activeTab === 'login' ? 'เข้าสู่ระบบ' : 'สร้างบัญชี'}
                 </button>
               </form>
             </div>
